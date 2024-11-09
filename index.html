@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="GE10 WPE of Son Magallanes">
+    
+    <title></title>
+    <meta name="title" content=""> 
+    <meta name="description" content=""> 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GE10 WPE: SON MAGALLANES">
     <meta id="og-image" property="og:image" content="">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GE 10</title>
     <link rel="shortcut icon" href="fav.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -71,14 +75,14 @@
             <div id="infobox">
                 <div id="infoleft">
                     <div class="infoimg">
-                        <img src="PX5.jpg" alt="">
+                        <img src="PX5.jpg" alt="Event Image">
                     </div>
                 </div>
 
                 <div id="inforight">
                     <div class="infotext">
                         <p class="point">Event:</p>
-                            <p class="info">Amogus Day</p>
+                            <p class="info metatitle">Amogus Day</p>
                         <p class="point">Organizer:</p>
                             <p class="info">Sussy Inc.</p>
                         <p class="point">Category:</p>
@@ -95,7 +99,7 @@
                 <p class="parahead">
                     Lorem, ipsum dolor.
                 </p>
-                <p class="para">
+                <p class="para metadesc">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem beatae aut voluptatem rem quam facere odio assumenda deleniti error molestiae velit nam eos cupiditate, corporis vel ipsam consequuntur culpa pariatur, vitae unde suscipit ab corrupti officia? Quaerat itaque cum provident, fugit nobis quo perferendis obcaecati ea aut! Omnis, minus mollitia repudiandae exercitationem sit quam vitae. Consectetur suscipit vero tempora ipsam fugiat quos facilis ea, doloribus sunt id, soluta pariatur placeat?
                 </p>
 
@@ -146,6 +150,18 @@
             const ogImageMeta = document.getElementById('og-image');
             ogImageMeta.content = firstImage.src;
           }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const metaTitle = document.querySelector('.metatitle').textContent;
+            const metaDesc = document.querySelector('.metadesc').textContent;
+
+            document.title = metaTitle;
+            document.querySelector('meta[name="title"]').content = metaTitle;
+
+            const descWords = metaDesc.split(" ");
+            const truncatedDesc = descWords.length > 20 ? descWords.slice(0, 20).join(" ") + "..." : metaDesc;
+            document.querySelector('meta[name="description"]').content = truncatedDesc;
         });
     </script>
 </body>
