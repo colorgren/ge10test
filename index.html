@@ -145,24 +145,25 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-          const firstImage = document.querySelector('img'); 
-          if (firstImage) {
-            const ogImageMeta = document.getElementById('og-image');
-            ogImageMeta.content = firstImage.src;
-          }
-        });
+    // Set og:image
+    const firstImage = document.querySelector('.eventimg img'); // Select from the gallery
+    if (firstImage) {
+        const ogImageMeta = document.getElementById('og-image');
+        ogImageMeta.content = firstImage.src;
+    }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const metaTitle = document.querySelector('.metatitle').textContent;
-            const metaDesc = document.querySelector('.metadesc').textContent;
 
-            document.title = metaTitle;
-            document.querySelector('meta[name="title"]').content = metaTitle;
+    // Set title and description
+    const metaTitle = document.querySelector('.metatitle').textContent;
+    const metaDesc = document.querySelector('.metadesc').textContent;
 
-            const descWords = metaDesc.split(" ");
-            const truncatedDesc = descWords.length > 20 ? descWords.slice(0, 20).join(" ") + "..." : metaDesc;
-            document.querySelector('meta[name="description"]').content = truncatedDesc;
-        });
+    document.title = metaTitle;
+    document.querySelector('meta[name="title"]').setAttribute('content', metaTitle); // Use setAttribute
+
+    const descWords = metaDesc.split(" ");
+    const truncatedDesc = descWords.length > 20 ? descWords.slice(0, 20).join(" ") + "..." : metaDesc;
+    document.querySelector('meta[name="description"]').setAttribute('content', truncatedDesc); // Use setAttribute
+});
     </script>
 </body>
 
