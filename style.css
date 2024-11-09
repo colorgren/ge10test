@@ -24,7 +24,6 @@ hr {
 }
 
 .squarebg {
-    background-color: #dfdf00;
     opacity: 1;
     background-image:  linear-gradient(#babab6 2px, transparent 2.3000000000000003px), linear-gradient(to right, #babab6 2px, #e0e2e1 2.3000000000000003px);
     background-size: 46px 46px;
@@ -37,6 +36,7 @@ body {
 header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 header h1 {
@@ -44,6 +44,24 @@ header h1 {
     font-weight: 900;
     color: #eee4f0;
     text-align: center;
+    margin-bottom: -30px;
+    transition: font-weight 0.15s ease-in-out;
+}
+
+header h1:hover {
+    font-weight: 300;
+}
+
+header h2 {
+    font-size: 45px;
+    font-weight: 300;
+    color: #eee4f0;
+    text-align: center;
+    transition: font-weight 0.15s ease-in-out;
+}
+
+header h2:hover {
+    font-weight: 900;
 }
 
 #all {
@@ -69,8 +87,14 @@ main {
 #headerbutton p {
     background-color: #dfdf00b7;
     font-size: 20px;
+    font-weight: 500;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
+    transition: font-weight 0.15s ease-in-out;
+}
+
+#headerbutton p:hover {
+    font-weight: 900;
 }
 
 #infobox {
@@ -130,26 +154,6 @@ main {
     margin: 0 0 5px 0;
 }
 
-@media only screen and (max-width: 1035px) {
-
-    #headerbutton p {
-        font-size: 15px;
-    }
-
-    .infotext {
-        padding: 20px;
-    }
-
-    .infotext .point {
-        font-size: 20px;
-    }
-
-    .infotext .info {
-        font-size: 25px;
-        text-align: justify;
-    }
-}
-
 .content {
     margin: 0 20px;
 }
@@ -171,6 +175,7 @@ main {
     padding: 0 35px;
     margin-bottom: 15px;
     font-size: 20px;
+    font-weight: 450;
 }
 
 .gallery {
@@ -194,11 +199,12 @@ main {
     gap: 10px;
 }
 
-.eventimg img {
-    max-height: 300px;
-    border-radius: 30px;
-    border: black solid 4px;
+.eventimg img, video {
+    aspect-ratio: 4 / 5;
+    width: clamp(200px, 30%, 300px); /* min,preferred,max */
     border-radius: 20px;
+    border: black solid 4px;
+    object-fit: cover; 
 }
 
 footer {
@@ -220,4 +226,29 @@ footer {
 
 #credits h2 {
     text-align: center;
+}
+
+
+@media only screen and (max-width: 1035px) {
+
+    #headerbutton p {
+        font-size: 15px;
+    }
+
+    .infotext {
+        padding: 20px;
+    }
+
+    .infotext .point {
+        font-size: 20px;
+    }
+
+    .infotext .info {
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .para {
+        font-size: 13px;
+    }
 }

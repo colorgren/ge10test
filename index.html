@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Xno's Image">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/945573882146983936/1204411186943102986/image.png?ex=669b0c13&is=6699ba93&hm=9fd8de4286b6eb88b058bd58567ccced5ee6c5116c4100a91060b3ca1e212bcb&">
+    <meta property="og:site_name" content="GE10 WPE of Son Magallanes">
+    <meta property="og:image" content="">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GE 10</title>
-    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/945573882146983936/1204411186943102986/image.png?ex=669b0c13&is=6699ba93&hm=9fd8de4286b6eb88b058bd58567ccced5ee6c5116c4100a91060b3ca1e212bcb&" type="image/x-icon">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -18,37 +19,52 @@
     <div id="all">
 
         <header>
-            <h1 id="Webtitle">GE10</h1>
+            <h1 id="Webtitle">GE10 WPE</h1>
+            <h2>NAME HERE</h2>
         </header>
 
         <main class="squarebg">
             <div id="headerbutton">
                 <a href="">
-                    <p>Home</p>
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
                 </a>
 
                 <a href="">
-                    <p>Church</p>
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
                 </a>
 
                 <a href="">
-                    <p>Classroom</p>
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
                 </a>
 
                 <a href="">
-                    <p>Community</p>
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
                 </a>
 
                 <a href="">
-                    <p>Court</p>
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
                 </a>
 
                 <a href="">
-                    <p>Culture</p>
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
                 </a>
 
                 <a href="">
-                    <p>About</p>
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About
+                    </p>
                 </a>
             </div>
 
@@ -62,11 +78,11 @@
                 <div id="inforight">
                     <div class="infotext">
                         <p class="point">Event:</p>
-                            <p class="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, cumque?</p>
+                            <p class="info">Amogus Day</p>
                         <p class="point">Organizer:</p>
-                            <p class="info">Example Inc.</p>
+                            <p class="info">Sussy Inc.</p>
                         <p class="point">Category:</p>
-                            <p class="info">Category Name</p>
+                            <p class="info">Church</p>
                         <p class="point">Date:</p>
                             <p class="info">Jan. 01, 2024</p>
                     </div>
@@ -110,8 +126,8 @@
                     <img src="Untitled(1).png" alt="">
                     <img src="WORKOUT(1).png" alt="">
                     <img src="tenor.gif" alt="">
+                    <video src="FreshieWalk_5.mp4" controls="" autoplay="" muted="" playsinline="" loop=""></video>
                 </div>
-                
             </div>
         </main>
 
@@ -122,6 +138,16 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const firstImage = document.querySelector('img'); 
+          if (firstImage) {
+            const ogImageMeta = document.getElementById('og-image');
+            ogImageMeta.content = firstImage.src;
+          }
+        });
+    </script>
 </body>
 
 </html>
