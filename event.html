@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="title" content="Amogus Day"> 
+    <meta name="description" content="[Sussy Inc. and Friends] [Church Event] [January 01, 2024]"> 
+    <meta id="og-image" property="og:image" content="PX5.jpg">
+    
+    <title></title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GE10 WPE: SON MAGALLANES">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+    <div id="all">
+
+        <header>
+            <h1 id="Webtitle">GE10 WPE</h1>
+            <h2>SON MAGALLANES</h2>
+        </header>
+
+        <main class="squarebg">
+            <div id="headerbutton">
+                <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="cat.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="cat.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="cat.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="cat.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="cat.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About
+                    </p>
+                </a>
+            </div>
+
+            <div id="infobox">
+                <div id="infoleft">
+                    <div class="infoimg">
+                        <img src="" alt="Event Image" id="eventImage">
+                    </div>
+                </div>
+                <div id="inforight">
+                    <div class="infotext">
+                        <p class="point">Event:</p>
+                        <p class="info metatitle" id="eventTitle"></p>
+                        <p class="point">Organizer:</p>
+                        <p class="info" id="eventOrganizer"></p>
+                        <p class="point">Category:</p>
+                        <p class="info" id="eventCategory"></p>
+                        <p class="point">Date:</p>
+                        <p class="info" id="eventDate"></p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="content">
+                <p class="parahead">
+                    Lorem, ipsum dolor.
+                </p>
+                <p class="para metadesc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem beatae aut voluptatem rem quam facere odio assumenda deleniti error molestiae velit nam eos cupiditate, corporis vel ipsam consequuntur culpa pariatur, vitae unde suscipit ab corrupti officia? Quaerat itaque cum provident, fugit nobis quo perferendis obcaecati ea aut! Omnis, minus mollitia repudiandae exercitationem sit quam vitae. Consectetur suscipit vero tempora ipsam fugiat quos facilis ea, doloribus sunt id, soluta pariatur placeat?
+                </p>
+
+                <p class="parahead">
+                    Lorem, ipsum dolor.
+                </p>
+                <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis obcaecati quod mollitia iure harum pariatur excepturi ipsum repudiandae, ipsa illo similique quam dolor explicabo debitis exercitationem ab labore reiciendis.
+                </p>
+
+                <p class="parahead">
+                    Lorem, ipsum dolor.
+                </p>
+                <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur fugit suscipit ut, eum perferendis vitae nostrum id quo velit!
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="gallery">
+                <p>Gallery</p>
+                <div class="eventimg">
+                    <img src="jesus-balling.gif" alt="">
+                    <img src="IMG_20240830_225221.jpg" alt="">
+                    <img src="image.png" alt="">
+                    <img src="test.jpg" alt="">
+                    <img src="Untitled(1).png" alt="">
+                    <img src="WORKOUT(1).png" alt="">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="credits">
+                <h2>Webpage powered by HTML, CSS, and JS</h2>
+                <h2>[MMXXIV]</h2>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const title = document.querySelector('meta[name="title"]').getAttribute('content') || '';
+            const description = document.querySelector('meta[name="description"]').getAttribute('content') || '';
+            const imageSrc = document.getElementById('og-image').getAttribute('content') || '';
+
+            const descriptionParts = description.match(/\[(.*?)\]/g);
+
+            document.getElementById('eventTitle').textContent = title;
+            document.getElementById('eventImage').src = imageSrc;
+
+            if (descriptionParts && descriptionParts.length >= 3) {
+                document.getElementById('eventOrganizer').textContent = descriptionParts[0].replace(/[\[\]]/g, '').trim();
+                document.getElementById('eventCategory').textContent = descriptionParts[1].replace(/[\[\]]/g, '').trim();
+                document.getElementById('eventDate').textContent = descriptionParts[2].replace(/[\[\]]/g, '').trim();
+            } else {
+                document.getElementById('eventOrganizer').textContent = "Not available";
+                document.getElementById('eventCategory').textContent = "Not available";
+                document.getElementById('eventDate').textContent = "Not available";
+            }
+
+            document.title = title;
+            document.querySelector('meta[name="title"]').setAttribute('content', title);
+
+            const descWords = description.split(" ");
+            const truncatedDesc = descWords.length > 20 ? descWords.slice(0, 20).join(" ") + "..." : description;
+            document.querySelector('meta[name="description"]').setAttribute('content', truncatedDesc);
+        });
+    </script>
+</body>
+
+</html>
